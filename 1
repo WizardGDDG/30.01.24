@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+struct WashingMachine 
+{
+    string firm;
+    string color;
+    float width;
+    float length;
+    float height;
+    int power;
+    int spinSpeed;
+    float heatingTemperature;
+
+    void print()
+    {
+        cout << "Фирма - " << firm << endl;
+        cout << "Цвет - " << color << endl;
+        cout << "Ширина - " << width << endl;
+        cout << "Длина - " << length << endl;
+        cout << "Мощность - " << power << endl;
+        cout << "Скорость отжима - " << spinSpeed << endl;
+        cout << "Температура нагрева - " << heatingTemperature << endl;
+    }
+};
+int main()
+{
+    setlocale(LC_ALL, "rus");
+    WashingMachine wm;
+    wm.color = "green";
+    wm.heatingTemperature = 43.5;
+    wm.length = 1.5;
+    wm.width = 0.5;
+    wm.print();
+}
+
