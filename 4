@@ -1,0 +1,52 @@
+
+#include <iostream>
+using namespace std;
+
+struct Animal
+{
+    string name;
+    string class1;
+    string nickname;
+    
+    void input()
+    {
+        cout << "Введите название: " << endl;
+        cin >> name;
+        cout << "Введите класс животного: " << endl;
+        cin >> class1;
+        cout << "Введите кличку: " << endl;
+        cin >> nickname;
+    }
+
+    void print()
+    {
+        cout << "Название" << name << endl;
+        cout << "Класс животного" << class1 << endl;
+        cout << "Кличка" << nickname << endl;
+    }
+
+    void voice()
+    {
+        bool com = false;
+        string a;
+        cout << "Подать голос?(да/нет) " << endl;
+        cin >> a;
+        if (a == "да")
+        {
+            com = true;
+        }
+        else
+        {
+            com = false;
+        }
+    }
+};
+int main()
+{
+    setlocale(LC_ALL, "rus");
+    Animal a;
+    a.input();
+    a.print();
+   
+}
+
